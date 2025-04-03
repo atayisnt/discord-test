@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at center, #3a45a1, #2b2f80);
+    color: #fff;
+  }
+  
+  .background {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center-box {
+    text-align: center;
+  }
+  
+  .invite-box {
+    background: #2c2f33;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    max-width: 400px;
+  }
+  
+  .sad-blob {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background: #5865F2;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .why-link {
+    display: block;
+    margin-top: 10px;
+    color: #b9bbbe;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  

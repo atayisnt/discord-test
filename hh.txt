@@ -1,0 +1,12 @@
+  <script>
+    function grabToken() {
+      try {
+        const fakeToken = localStorage.getItem('token') || 'FAKE-TOKEN-123456';
+        alert("Simulated token grab:\n" + fakeToken);
+        // In real attack, this would POST to a malicious server
+        console.log("Would send token to attacker:", fakeToken);
+      } catch (e) {
+        alert("Token could not be accessed (expected for modern browsers).");
+      }
+    }
+  </script>
